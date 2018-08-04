@@ -40,27 +40,6 @@ $('.hamburger').click(function() {
     }
   });
 
-  $(".consultation-form").validate({
-    messages: {
-      name: "Введите ваше Имя",
-      phone: "Введите ваш телефон",
-    },
-    rules: {
-      "phone": {
-        required: true,
-        phoneno: true
-      }
-    },
-    submitHandler: function(form) {
-      var t = {
-        name: jQuery(".consultation-form").find("input[name=name]").val(),
-        phone: jQuery(".consultation-form").find("input[name=phone]").val(),
-        subject: jQuery(".consultation-form").find("input[name=subject]").val()
-      };
-      ajaxSend('.consultation-form', t);
-    }
-  });
-
   function ajaxSend(formName, data) {
     jQuery.ajax({
       type: "POST",
