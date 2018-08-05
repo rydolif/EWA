@@ -71,6 +71,9 @@
 	&__content
 		padding-top: 220px
 		padding-bottom: 185px
+		background-position: center
+		background-size: cover
+		background-repeat: no-repeat
 
 		h2
 			font-size: 48px
@@ -131,6 +134,9 @@
 	h2
 		margin-bottom: 65px
 		text-align: center
+
+	h3
+		margin-bottom: 25px
 	
 	p
 		color: #35414a
@@ -166,12 +172,15 @@
 
 	&__list
 		margin-left: 120px
-		padding-top: 50px
+		padding-top: 45px
 
 	&__item
 		position: relative
 		padding-left: 120px
 		z-index: 1
+		margin-bottom: 30px
+		&:last-child
+			margin-bottom: 0
 
 	&__circle
 		position: absolute
@@ -202,7 +211,38 @@
 			top: -3px
 			left: 50%
 			transform: translate(-20%, 0)
+	
+	&__download
+		position: relative
+		display: block
+		padding-left: 50px
+		margin-top: 30px
+		font-size: 22px
+		text-decoration: underline
+		&::before
+			content: "\f381"
+			position: absolute
+			left: 0
+			top: 0
+			font-family: $fontawesome
+			font-size: 25px
+			color: $h3
+			font-weight: 800
 
+.landing
+	padding-top: 120px
+	padding-bottom: 165px
+	background-position: center
+	background-size: cover
+	background-repeat: no-repeat
+
+	h2
+		text-align: center
+
+
+	&__content
+		background-color: #fff
+		padding: 70px 120px 60px 55px
 
 .footer
 	height: 1000px

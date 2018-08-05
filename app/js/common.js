@@ -1,5 +1,18 @@
 $(function() {
 
+//-------------------------скорость якоря---------------------------------------
+$(".nav").on("click","a", function (event) {
+    event.preventDefault();
+    var id  = $(this).attr('href'),
+        top = $(id).offset().top;
+    $('body,html').animate({scrollTop: top - 90}, 'slow', 'swing');
+//--------------------закриття меню при кліку на ссилку якоря--------------------
+//    $('.hamburger--3dx').removeClass('is-active');
+//    $('.header__top').removeClass('header__top-menu');
+//    $('.header__nav').removeClass('header__nav-active');
+
+});
+
 //------------------------------гамбургер-----------------------------
 $('.hamburger').click(function() {
   $(this).toggleClass('hamburger-active');
