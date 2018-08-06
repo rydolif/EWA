@@ -1,11 +1,84 @@
 $(function() {
 
+//-------------------------portfolio slider-----------------------------------------------
+  $('.portfolio__slider').slick({
+    dots: false,
+    arrows: false,
+    speed: 100,
+    slidesToShow: 4,
+    rows: 2,
+    centerMode: true,
+    centerPadding: '250px',
+    slidesToShow: 4,
+    responsive: [
+      {
+        breakpoint: 1600,
+        settings: {
+          slidesToShow: 3,
+          centerPadding: '150px',
+        }
+      },
+      {
+        breakpoint: 1200,
+        settings: {
+          slidesToShow: 3,
+          centerPadding: '50px',
+        }
+      },
+      {
+        breakpoint: 776,
+        settings: {
+          slidesToShow: 3,
+          centerPadding: '50px',
+        }
+      },
+      {
+        breakpoint: 576,
+        settings: {
+          slidesToShow: 2,
+          centerPadding: '30px',
+        }
+      },
+      {
+        breakpoint: 480,
+        settings: {
+          slidesToShow: 1,
+          centerPadding: '30px',
+        }
+      }
+    ]
+  });
+
+//-------------------------package slider-----------------------------------------------
+  var swiperone = new Swiper('.package__slider', {
+    spaceBetween: 30,
+    effect: 'fade',
+    navigation: {
+      nextEl: '.swiper-button-next',
+      prevEl: '.swiper-button-prev',
+    },
+  });
+
+//-------------------------скорость якоря---------------------------------------
+  $(".nav").on("click","a", function (event) {
+      event.preventDefault();
+      var id  = $(this).attr('href'),
+          top = $(id).offset().top;
+      $('body,html').animate({scrollTop: top - 90}, 'slow', 'swing');
+  //--------------------закриття меню при кліку на ссилку якоря--------------------
+     $('.hamburger--3dx').removeClass('is-active');
+     $('.header-menu').removeClass('header-menu');
+     $('.header-active').removeClass('header-active');
+     $('.nav-active').removeClass('nav-active');
+
+  });
+
 //------------------------------гамбургер-----------------------------
-$('.hamburger').click(function() {
-  $(this).toggleClass('hamburger-active');
-  $('nav').toggleClass('nav-active');
-  $('header').toggleClass('header-menu');
-});
+  $('.hamburger').click(function() {
+    $(this).toggleClass('hamburger-active');
+    $('nav').toggleClass('nav-active');
+    $('header').toggleClass('header-menu');
+  });
 
 //-------------------------------попандер---------------------------------------
   $('.modal').popup({transition: 'all 0.3s'});
@@ -17,29 +90,32 @@ $('.hamburger').click(function() {
 	   return this.optional(element) || phone_number.match(/\+[0-9]{1}\s\([0-9]{3}\)\s[0-9]{3}-[0-9]{2}-[0-9]{2}/);
 	}, "Введите Ваш телефон");
 
-  $(".order-form").validate({
-    messages: {
-      name: "Введите ваше Имя",
-      phone: "Введите ваш телефон",
-    },
-    rules: {
-      "phone": {
-        required: true,
-        phoneno: true
-      }
-    },
-    submitHandler: function(form) {
-      var t = {
-        name: jQuery(".order-form").find("input[name=name]").val(),
-        phone: jQuery(".order-form").find("input[name=phone]").val(),
-        number: jQuery(".order-form").find("input[name=number]").val(),
-        product: jQuery(".order-form").find("input[name=product]").val(),
-        subject: jQuery(".order-form").find("input[name=subject]").val()
-      };
-      ajaxSend('.order-form', t);
-    }
-  });
+  $(".form").each(function(index, el) {
+    $(el).addClass('form-' + index);
 
+    $('.form-' + index).validate({
+      rules: {
+        phone: {
+          required: true,
+          phoneno: true
+        },
+        name: 'required',
+      },
+      messages: {
+        name: "Введите Ваше имя",
+        phone: "Введите Ваш телефон",
+      },
+      submitHandler: function(form) {
+        var t = {
+          name: jQuery('.form-' + index).find("input[name=name]").val(),
+          phone: jQuery('.form-' + index).find("input[name=phone]").val(),
+          subject: jQuery('.form-' + index).find("input[name=subject]").val()
+        };
+        ajaxSend('.form-' + index, t);
+      }
+    });
+
+  });
   function ajaxSend(formName, data) {
     jQuery.ajax({
       type: "POST",

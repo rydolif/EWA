@@ -43,7 +43,7 @@ h1
 	line-height: .95
 	letter-spacing: 1px
 	color: #fff
-	text-shadow: 0 30px 50px rgba(0, 0, 0, .3), 0 -30px 50px rgba(0, 0, 0, .3)
+	text-shadow: 0 30px 50px rgba(0, 0, 0, .04), 0 -30px 50px rgba(0, 0, 0, .04)
 	font-weight: 900
 
 h2
@@ -66,26 +66,32 @@ i
 	color: #fff
 
 input, textarea
-	border: #808080 1px solid
+	border: #c2dbdf 1px solid
 	border-radius: 0
 	outline: none
 	box-shadow: none
 	-webkit-appearance: none
+	width: 100%
+	border-radius: 4px
+	color: #6b828d
+	height: 70px
+	padding: 0 20px
+	font-size: 24px
+	font-weight: 300
 	&:focus:required:invalid
-		border-color: #808080
+		border-color: #c2dbdf
 		outline: none
 		box-shadow: none
 		-webkit-appearance: non
 	&:required:valid
-		border-color: #808080
+		border-color: #c2dbdf
 		outline: none
 		box-shadow: none
 		-webkit-appearance: non
 	&::placeholder
-		color: #808080
-		font-size: 12px
-		text-transform: uppercase
-		line-height: 1
+		color: #6b828d
+		font-size: 24px
+		line-height: 70px
 
 b, strong
 	font-weight: 700
@@ -130,6 +136,19 @@ a:hover
 		text-decoration: none
 		&::before
 			transform: scale(1)
+
+
+@keyframes hover
+	0%
+		transform: scale(1)
+	100%
+		transform: scale(1.2)
+
+@keyframes hover-back
+	0%
+		transform: scale(1.2)
+	100%
+		transform: scale(1)
 
 
 @import "_base/preloader"

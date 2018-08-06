@@ -10,6 +10,16 @@
 	padding: 30px 0
 	transition: all .3s
 	z-index: 1001
+	
+	&-menu
+		background-color: rgba(255, 255, 255, .95)
+		padding: 10px 0
+
+		.header__container
+			padding-bottom: 0
+
+		.header__info
+			display: none
 
 	&-active
 		background-color: rgba(255, 255, 255, .95)
@@ -17,6 +27,9 @@
 
 		.header__info
 			display: none
+
+		.header__container
+			padding-bottom: 0
 
 	&__container
 		position: relative
@@ -71,6 +84,9 @@
 	&__content
 		padding-top: 220px
 		padding-bottom: 185px
+		background-position: center
+		background-size: cover
+		background-repeat: no-repeat
 
 		h2
 			font-size: 48px
@@ -124,13 +140,24 @@
 		&:last-child
 			margin-right: 0
 
+	.header__info
+		display: none
+
+	.header__mail
+		display: none
+
+	.header__btn
+		display: none
+
 .about
 	padding-top: 80px
-	padding-bottom: 130px
 
 	h2
 		margin-bottom: 65px
 		text-align: center
+
+	h3
+		margin-bottom: 7px
 	
 	p
 		color: #35414a
@@ -166,12 +193,27 @@
 
 	&__list
 		margin-left: 120px
-		padding-top: 50px
+		padding-top: 55px
+
+		h3
+			margin-bottom: 30px
 
 	&__item
 		position: relative
 		padding-left: 120px
 		z-index: 1
+		padding-bottom: 55px
+		&::before
+			content: ""
+			position: absolute
+			left: 33px
+			top: 55px
+			bottom: 0
+			border: 1px dashed #cbe0e3
+		&:last-child
+			padding-bottom: 0
+			&::before
+				display: none
 
 	&__circle
 		position: absolute
@@ -202,8 +244,453 @@
 			top: -3px
 			left: 50%
 			transform: translate(-20%, 0)
+	
+	&__download
+		position: relative
+		display: block
+		padding-left: 50px
+		margin-top: 35px
+		font-size: 22px
+		text-decoration: underline
+		&::before
+			content: "\f381"
+			position: absolute
+			left: 0
+			top: 0
+			font-family: $fontawesome
+			font-size: 25px
+			color: $h3
+			font-weight: 800
+
+.portfolio
+	position: relative
+
+	&__slide
+		position: relative
+		width: 100%
+		height: 100%
+		z-index: 2
+		margin-right: 5px
+		&:hover
+			z-index: 10
+			img
+				animation: hover .5s linear 1 forwards
+			.portfolio__text
+				opacity: 1
+				animation: hover .5s linear 1 forwards
+
+		&:focus
+			z-index: 10
+			img
+				animation: hover .5s linear 1 forwards
+			.portfolio__text
+				opacity: 1
+				animation: hover .5s linear 1 forwards
+
+		a
+			display: block
+
+		img
+			width: 100%
+			height: 100%
+			animation: hover-back .5s linear 1 forwards
+
+	&__text
+		position: absolute
+		left: 0
+		top: 0
+		bottom: 0
+		right: 0
+		opacity: 0
+		transition: all .6s
+		padding: 45px 55px
+		&::before
+			content: ""
+			position: absolute
+			left: 23px
+			top: 23px
+			bottom: 23px
+			right: 23px
+			background-color: rgba(0, 0, 0, .5)
+			transition: all .6s
+			animation: hover-back .5s linear 1 forwards
+			z-index: -1
+
+	p
+		color: #fff
+		font-size: 25px
+		line-height: 35px
+		margin-bottom: 20px
+		font-weight: 300
+
+	b, strong
+		font-weight: 900
+	
+	&__circle
+		width: 35px
+		height: 35px
+		background-color: #fff
+		border-radius: 100%
+		font-size: 40px
+		text-align: center
+		line-height: 35px
+		color: #540811
+
+	.slick-track
+		padding-top: 130px
+		padding-bottom: 40px
+
+.slick-slide
+	margin-right: 5px
+	margin-bottom: 5px
+
+.landing
+	padding-top: 100px
+	padding-bottom: 165px
+	background-position: center
+	background-size: cover
+	background-repeat: no-repeat
+	overflow: inherit
+
+	h2
+		text-align: center
+		margin-bottom: 90px
+
+	&__content
+		position: relative
+		display: flex
+		flex-direction: row
+		justify-content: space-between
+		background-color: #fff
+		padding: 70px 120px 60px 55px
+		margin: 0 120px
+		z-index: 1
+		&::before
+			content: url(../img/landing__nose.png)
+			position: absolute
+			width: auto
+			height: auto
+			left: 31.6%
+			bottom: -257px
+		&::after
+			content: ""
+			position: absolute
+			right: 20px
+			top: 20px
+			width: 260px
+			height: 320px
+			background-color: #ebfaf7
+			z-index: -1
+
+	&__text
+		font-size: 30px
+		line-height: 1.35
+
+	&__block
+		display: flex
+		flex-direction: column
+		align-items: flex-end
+		font-size: 20px
+		font-weight: 600
+
+	&__namber
+		font-size: 60px
+		color: #35414a
+		line-height: 1.3
+		margin-bottom: 35px
+	
+	&__btn
+		padding: 0 100px
+		height: 80px
+		line-height: 80px
+		font-size: 24px
+		border-radius: 10px
+
+.package
+	padding-top: 160px
+	padding-bottom: 130px
+
+	h2
+		margin-bottom: 20px
+	
+	h3
+		font-size: 36px
+		margin-bottom: 80px
+		line-height: 60px
+		span
+			font-weight: 400
+			color: #35414a
+
+	p
+		font-size: 20px
+
+	&__sub-title
+		margin-bottom: 55px
+	
+	&__block
+		position: relative
+
+	&__namber
+		position: absolute
+		right: 25px
+		top: -90px
+		width: 250px
+		height: 250px
+		background-color: #6edfff
+		border-radius: 100%
+		color: #1c2020
+		padding-left: 60px
+		padding-top: 10px
+
+		b, strong
+			font-size: 128px
+			font-weight: 900
+			line-height: 1
+
+		sup
+			font-size: 84px
+			font-weight: 300
+			line-height: 1
+
+		span
+			font-weight: 500
+			font-size: 36px
+
+	&__list
+		display: flex
+		flex-direction: row
+		justify-content: space-between
+		margin-bottom: 100px
+		line-height: 30px
+
+	h4
+		font-size: 22px
+		font-weight: 500
+		color: #111
+		margin-bottom: 15px
+
+	&__btn
+		height: 80px
+		line-height: 80px
+		padding: 0 100px
+		font-size: 24px
+		border-radius: 10px
+	
+	&__wrap
+		position: relative
+		&::before
+			content: ""
+			position: absolute
+			top: 0
+			left: 50%
+			transform: translate(-35%, 0)
+			width: 700px
+			height: 700px
+			background-color: #ebfaf7
+			border-radius: 100%
+
+	&__slider
+		position: absolute
+
+		&_img
+			margin-top: 40px
+			width: 780px
+			height: 600px
+
+		i
+			position: absolute
+			top: 50%
+			left: 50%
+			transform: translate(-50%, -50%)
+			color: #1c2020
+			font-size: 25px
+	
+	.swiper-button-prev, .swiper-button-next
+		background-image: none
+		background-color: #fff
+		top: auto
+		bottom: 0
+		left: 250px
+		border-radius: 100%
+		width: 70px
+		height: 70px
+		transition: all .3s
+
+	.swiper-button-next
+		left: 330px
+
+	
+	.swiper-button-disabled
+		background: none
+
+.customers
+	padding-top: 100px
+	padding-bottom: 105px
+	background-position: center
+	background-size: cover
+	background-repeat: no-repeat
+
+	h2
+		margin-bottom: 30px
+
+	p
+		font-size: 22px
+		color: #35414a
+		font-weight: 300
+		margin-bottom: 65px
+
+	&__namber
+		position: relative
+		display: inline-block
+		font-weight: 900
+		font-size: 60px
+		color: #35414a
+		line-height: 1.4
+		z-index: 1
+		margin-bottom: 20px
+		&::before
+			content: ""
+			position: absolute
+			left: 50%
+			transform: translate(-50%, 0)
+			width: 80%
+			height: 100%
+			background-color: #6edfff
+			z-index: -1
+
+	&__list
+		display: flex
+		flex-direction: row
+		flex-wrap: wrap
+		width: 60%
+
+	&__item
+		width: 23.5%
+		max-height: 100px
+		background-color: #fff
+		margin-right: 10px
+		margin-bottom: 10px
+		transition: all .6s
+		overflow: hidden
+		&:hover
+			box-shadow: 2px 4px 5px rgba(0, 0, 0, .1)
+			img
+				transition: all .6s
+				transform: scale(1.03)
+		&:focus
+			box-shadow: 2px 4px 5px rgba(0, 0, 0, .1)
+			img
+				transition: all .6s
+				transform: scale(1.03)
+
+		a
+			display: block
+
+		img
+			display: block
+			margin: 0 auto
 
 
 .footer
-	height: 1000px
+	position: relative
+	padding-top: 80px
+	padding-bottom: 100px
+
+	&::before
+		content: ""
+		position: absolute
+		left: 51%
+		right: 0
+		top: 0
+		bottom: 0
+		height: 100%
+		background-color: #ebfaf7
+
+	h2
+		margin-bottom: 35px
+
+	a
+		display: inline-block
+
+	p
+		font-size: 24px
+		font-weight: 300
+		line-height: 1.45
+		margin-bottom: 35px
+		span
+			display: block
+			font-size: 20px
+			color: #6b828d
+			font-weight: 300
+			margin-bottom: 30px
+
+	&__tel
+		font-size: 48px
+		color: #282b2b
+		line-height: 1
+		margin-bottom: 25px
+		&:hover
+			color: #282b2b
+		&:focus
+			color: #282b2b
+		&::before
+			color: #282b2b
+			bottom: 3px
+			height: 2px
+
+		span
+			font-size: 36px
+			color: #1c2020
+			font-weight: 400
+
+	&__mail
+		position: relative
+		padding-left: 30px
+		margin-bottom: 20px
+		font-size: 24px
+		line-height: 1
+		&::after
+			content: "\f0e0"
+			position: absolute
+			left: 0
+			top: 4px
+			font-family: $fontawesome
+			font-weight: 800
+			font-size: 20px
+
+	&__soc
+		display: flex
+		flex-direction: row
+		i
+			color: #282b2b
+			font-size: 30px
+			margin-right: 15px
+
+	&__form
+		padding-left: 120px
+		max-width: 600px
+
+		p
+			font-size: 16px
+			font-weight: 300
+
+		&_line
+			width: 100%
+			margin-bottom: 20px
+			position: relative
+
+		&_btn
+			height: 80px
+			line-height: 80px
+			padding: 0 93px
+			border-radius: 10px
+			font-size: 24px
+			margin-top: 30px
+			margin-bottom: 25px
+
+	h3
+		margin-bottom: 50px
+		font-weight: 300
+		font-size: 36px
+
 @import "media" // Always at the end

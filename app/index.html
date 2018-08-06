@@ -10,7 +10,9 @@
 	<link rel="icon" href="img/favicon.ico">
 	<meta name="theme-color" content="#000">
 
+	
 	<link rel="stylesheet" href="css/main.min.css">
+
 </head>
 
 <body>
@@ -35,11 +37,23 @@
 						<li><a href="#package" class="header__link link">Пакетные предложения</a></li>
 						<li><a href="#contacts" class="header__link link">Контакты</a></li>
 					</ul>
+					<div class="header__info">
+						<a href="tel:88005050278" class="header__info_tel link">8 800 505 02 78</a>
+						<p>по России бесплатно</p>
+					</div>
+					<a href="mailto:info@bestslide.ru" class="header__mail link">info@bestslide.ru</a>
+					<a href="#" class="header__btn btn order_open">Заказать обратный звонок</a>
 				</nav>
+
+				<button class="hamburger" type="button">
+					<span class="hamburger__box">
+						<span class="hamburger__item"></span>
+					</span>
+				</button>
 
 				<a href="mailto:info@bestslide.ru" class="header__mail link">info@bestslide.ru</a>
 
-				<a href="#" class="header__btn btn">Заказать обратный звонок</a>
+				<a href="#" class="header__btn btn order_open">Заказать обратный звонок</a>
 			</div>
 
 			<div class="header__info">
@@ -52,7 +66,7 @@
 	
 	<main>
 
-		<section class="header__content" style="background: url(../img/header-bg.jpg);">
+		<section class="header__content" style="background-image: url(img/header-bg.jpg);">
 			<div class="container">
 				
 				<h1>Bestslide</h1>
@@ -62,7 +76,7 @@
 
 				<div class="header__content_block">
 					<p>Закажите лендинг сегодня - получите дополнительную <br>скидку 10% на все пакетные предложения</p>
-					<a href="#" class="header__content_btn btn">Заказать</a>
+					<a href="#" class="header__content_btn btn order_open">Заказать</a>
 				</div>
 
 			</div>
@@ -132,7 +146,7 @@
 								</div>
 								<h3>Дополнительный сервис</h3>
 								<p>Создание презентаций, брошюр, каталогов и др. полиграфической продукции в стиле сайта</p>
-								<a href="#"> скачать нашу презентацию</a>
+								<a href="#" class="about__download"> скачать нашу презентацию</a>
 							</div>
 						</div>
 
@@ -143,29 +157,325 @@
 			</div>
 		</section>
 
-		<section class="portfolio section" id="portfolio">
+		<div class="portfolio section" id="portfolio">
+			<div class="portfolio__slider">
+					<div class="portfolio__slide">
+						<a href="img/portfolio/3.jpg" data-fancybox="gallery">
+							<img src="img/portfolio/1.jpg" alt="">
+							<div class="portfolio__text">
+								<p>Презентация <br>маркетингового <br>исследования</p>
+								<p><b>Heinz</b></p>
+								<div class="portfolio__circle">+</div>
+							</div>
+						</a>
+					</div>
+					<div class="portfolio__slide">
+						<a href="img/portfolio/1.jpg" data-fancybox="gallery">
+							<img src="img/portfolio/1.jpg" alt="">
+							<div class="portfolio__text">
+								<p>Презентация <br>маркетингового <br>исследования</p>
+								<p><b>Heinz</b></p>
+								<div class="portfolio__circle">+</div>
+							</div>
+						</a>
+					</div>
+					<div class="portfolio__slide">
+						<a href="img/portfolio/2.jpg" data-fancybox="gallery">
+							<img src="img/portfolio/2.jpg" alt="">
+							<div class="portfolio__text">
+								<p>Презентация <br>маркетингового <br>исследования <br><b>Heinz</b></p>
+								<div class="portfolio__circle"><span></span>+</div>
+							</div>
+						</a>
+					</div>
+					<div class="portfolio__slide">
+						<a href="img/portfolio/3.jpg" data-fancybox="gallery">
+							<img src="img/portfolio/3.jpg" alt="">
+							<div class="portfolio__text">
+								<p>Презентация <br>маркетингового <br>исследования <br><b>Heinz</b></p>
+								<div class="portfolio__circle"><span></span>+</div>
+							</div>
+						</a>
+					</div>
+					<div class="portfolio__slide">
+						<a href="img/portfolio/4.jpg" data-fancybox="gallery">
+							<img src="img/portfolio/4.jpg" alt="">
+							<div class="portfolio__text">
+								<p>Презентация <br>маркетингового <br>исследования <br><b>Heinz</b></p>
+								<div class="portfolio__circle"><span></span>+</div>
+							</div>
+						</a>
+					</div>
+					<div class="portfolio__slide">
+						<a href="img/portfolio/5.jpg" data-fancybox="gallery">
+							<img src="img/portfolio/5.jpg" alt="">
+							<div class="portfolio__text">
+								<p>Презентация <br>маркетингового <br>исследования <br><b>Heinz</b></p>
+								<div class="portfolio__circle"><span></span>+</div>
+							</div>
+						</a>
+					</div>
+					<div class="portfolio__slide">
+						<a href="img/portfolio/6.jpg" data-fancybox="gallery">
+							<img src="img/portfolio/6.jpg" alt="">
+							<div class="portfolio__text">
+								<p>Презентация <br>маркетингового <br>исследования <br><b>Heinz</b></p>
+								<div class="portfolio__circle"><span></span>+</div>
+							</div>
+						</a>
+					</div>
+					<div class="portfolio__slide">
+						<a href="img/portfolio/7.jpg" data-fancybox="gallery">
+							<img src="img/portfolio/7.jpg" alt="">
+							<div class="portfolio__text">
+								<p>Презентация <br>маркетингового <br>исследования <br><b>Heinz</b></p>
+								<div class="portfolio__circle"><span></span>+</div>
+							</div>
+						</a>
+					</div>
+					<div class="portfolio__slide">
+						<a href="img/portfolio/8.jpg" data-fancybox="gallery">
+							<img src="img/portfolio/8.jpg" alt="">
+							<div class="portfolio__text">
+								<p>Презентация <br>маркетингового <br>исследования <br><b>Heinz</b></p>
+								<div class="portfolio__circle"><span></span>+</div>
+							</div>
+						</a>
+					</div>
+					<div class="portfolio__slide">
+						<a href="img/portfolio/1.jpg" data-fancybox="gallery">
+							<img src="img/portfolio/1.jpg" alt="">
+							<div class="portfolio__text">
+								<p>Презентация <br>маркетингового <br>исследования <br><b>Heinz</b></p>
+								<div class="portfolio__circle"><span></span>+</div>
+							</div>
+						</a>
+					</div>
+					<div class="portfolio__slide">
+						<a href="img/portfolio/2.jpg" data-fancybox="gallery">
+							<img src="img/portfolio/2.jpg" alt="">
+							<div class="portfolio__text">
+								<p>Презентация <br>маркетингового <br>исследования <br><b>Heinz</b></p>
+								<div class="portfolio__circle"><span></span>+</div>
+							</div>
+						</a>
+					</div>
+					<div class="portfolio__slide">
+						<a href="img/portfolio/3.jpg" data-fancybox="gallery">
+							<img src="img/portfolio/3.jpg" alt="">
+							<div class="portfolio__text">
+								<p>Презентация <br>маркетингового <br>исследования <br><b>Heinz</b></p>
+								<div class="portfolio__circle"><span></span>+</div>
+							</div>
+						</a>
+					</div>
+					<div class="portfolio__slide">
+						<a href="img/portfolio/4.jpg" data-fancybox="gallery">
+							<img src="img/portfolio/4.jpg" alt="">
+							<div class="portfolio__text">
+								<p>Презентация <br>маркетингового <br>исследования <br><b>Heinz</b></p>
+								<div class="portfolio__circle"><span></span>+</div>
+							</div>
+						</a>
+					</div>
+					<div class="portfolio__slide">
+						<a href="img/portfolio/5.jpg" data-fancybox="gallery">
+							<img src="img/portfolio/5.jpg" alt="">
+							<div class="portfolio__text">
+								<p>Презентация <br>маркетингового <br>исследования <br><b>Heinz</b></p>
+								<div class="portfolio__circle"><span></span>+</div>
+							</div>
+						</a>
+					</div>
+			</div>
+		</div>
+
+		<section class="landing section" id="landing" style="background-image: url(img/landing-bg.jpg);">
 			<div class="container">
+
+				<h2>Хотите стильный конверсионный лендинг?</h2>
+
+				<div class="landing__content">
+					<p class="landing__text">Закажите лендинг сегодня - <br>получите дополнительную <br>скидку 10% на все пакетные <br>предложения</p>
+					<div class="landing__block">
+						<p>Предложением воспользовались</p>
+						<div class="landing__namber">258 раз</div>
+						<a href="#" class="landing__btn btn order_open">Заказать</a>
+					</div>
+				</div>
 				
 			</div>
 		</section>
 
 		<section class="package section" id="package">
 			<div class="container">
+				<div class="row">
+					
+					<div class="col-xl-7">
+						<h2>Пакетом – выгодней</h2>
+						<p class="package__sub-title">Необходим пакет маркетинговых инструментов для нового <br>продукта/услуги или для продвижения бизнеса?</p>
+						<div class="package__block">
+							<h3>При заказе пакета <br> <span>«Презентация + Landing Page»</span></h3>
+							<div class="package__namber">
+								<p><b>10</b><sup>%</sup><br><span>скидка</span></p>
+							</div>
+						</div>
+						<ul class="package__list">
+							<li>
+								<h4>Современный <br>дизайн</h4>
+								<p>Стильный дизайн</p>
+							</li>
+							<li>
+								<h4>Увеличение <br>трафика</h4>
+								<p>В два раза</p>
+							</li>
+							<li>
+								<h4>Продающие <br>тексты </h4>
+								<p>Грамотные тексты <br>и продающие <br>офферы</p>
+							</li>
+							<li>
+								<h4>Единый <br>стиль </h4>
+								<p>Landing page <br>и презентация <br>в едином стиле</p>
+							</li>
+						</ul>
+						<a href="#" class="package__btn btn order_open">Заказать</a>
+					</div>
+
+					<div class="col-xl-5">
+						<div class="package__wrap">
+							<div class="package__slider swiper-container">
+								<div class="swiper-wrapper">
+									<div class="package__slider_slide swiper-slide">
+										<img src="img/slider/slide1.png" alt="slide" class="package__slider_img">
+									</div>
+									<div class="package__slider_slide swiper-slide">
+										<img src="img/slider/slide1.png" alt="slide" class="package__slider_img">
+									</div>
+									<div class="package__slider_slide swiper-slide">
+										<img src="img/slider/slide1.png" alt="slide" class="package__slider_img">
+									</div>
+								</div>
+								<!-- Add Arrows -->
+								<div class="swiper-button-next">
+									<i class="fas fa-long-arrow-alt-right"></i>
+								</div>
+								<div class="swiper-button-prev">
+									<i class="fas fa-long-arrow-alt-left"></i>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+
+		<section class="customers section" style="background-image: url(img/customers__bg.jpg);">
+			<div class="container">
 				
+				<h2>Наши клиенты</h2>
+
+				<div class="customers__namber">
+					<span>1277</span>
+				</div>
+
+				<p>крупных корпораций, небольших компаний и государственных структур <br>уже оценили эффективность наших продуктов</p>
+
+				<div class="customers__list">
+					<div class="customers__item">
+						<a href="#" target="_blank"><img src="img/customers/1.png" alt="icon"></a>
+					</div>
+					<div class="customers__item">
+						<a href="#" target="_blank"><img src="img/customers/2.png" alt="icon"></a>
+					</div>
+					<div class="customers__item">
+						<a href="#" target="_blank"><img src="img/customers/3.png" alt="icon"></a>
+					</div>
+					<div class="customers__item">
+						<a href="#" target="_blank"><img src="img/customers/4.png" alt="icon"></a>
+					</div>
+					<div class="customers__item">
+						<a href="#" target="_blank"><img src="img/customers/5.png" alt="icon"></a>
+					</div>
+					<div class="customers__item">
+						<a href="#" target="_blank"><img src="img/customers/6.png" alt="icon"></a>
+					</div>
+					<div class="customers__item">
+						<a href="#" target="_blank"><img src="img/customers/7.png" alt="icon"></a>
+					</div>
+					<div class="customers__item">
+						<a href="#" target="_blank"><img src="img/customers/8.png" alt="icon"></a>
+					</div>
+					<div class="customers__item">
+						<a href="#" target="_blank"><img src="img/customers/9.png" alt="icon"></a>
+					</div>
+					<div class="customers__item">
+						<a href="#" target="_blank"><img src="img/customers/10.png" alt="icon"></a>
+					</div>
+					<div class="customers__item">
+						<a href="#" target="_blank"><img src="img/customers/11.png" alt="icon"></a>
+					</div>
+					<div class="customers__item">
+						<a href="#" target="_blank"><img src="img/customers/12.png" alt="icon"></a>
+					</div>
+				</div>
+
 			</div>
 		</section>
 
 	</main>
 
-	<footer class="footer" id="contacts">
+	<footer class="footer section" id="contacts">
 		<div class="container">
+			<div class="row">
+				
+				<div class="col-lg-6">
+					<h2>Контакты</h2>
+					<p>Ответим на все вопросы, связанные <br>с разработкой презентации для Вашей компании</p>
+					<a href="tel:88005050278" class="footer__tel link">8 800 505 02 78 <br></a>
+					<p><span>Звонок по России бесплатный</span></p>
+					<a href="tel:+74992130308" class="footer__tel link"><span>+7 (499) 213 03 08</span></a><br>
+					<a href="mailto:info@bestslide.ru" class="footer__mail link">info@bestslide.ru</a>
+					<div class="footer__soc">
+						<a href="#"><i class="fab fa-vk"></i></a>
+						<a href="#"><i class="fab fa-skype"></i></a>
+					</div>
+				</div>
 
+				<div class="col-lg-6">
+					<form action="sendmail.php" class="footer__form form" method="post">
+						<h3>Оставьте заявку, <br>мы свяжемся с Вами</h3>
+						<input type="hidden" name="subject" value="Узнать подробнее!">
+						<div class="footer__form_line"><input type="text" name="name" placeholder="Имя" required></div>
+						<div class="footer__form_line"><input type="tel" name="phone" required placeholder="Телефон" pattern="\+7\s\([0-9]{3}\)\s[0-9]{3}-[0-9]{2}-[0-9]{2}"></div>
+						<div><button type="submit" class="btn footer__form_btn" name="submit" value="отправить">Отправить</button></div>
+						<p>Нажимая на кнопку, вы даете согласие <br>на обработку своих персональных данных</p>
+					</form>
+				</div>
+
+			</div>
 		</div>
 	</footer>
+	
+	<!-- 	modal -->
+	<div class="modal" id="order">
+		<div class="wrapper">
+			<form action="sendmail.php" class="form" method="post">
+
+				<button class="close order_close" type="button"></button>
+
+				<h3>Оставьте заявку, <br>мы свяжемся с Вами</h3>
+				<input type="hidden" name="subject" value="Узнать подробнее!">
+				<div class="footer__form_line"><input type="text" name="name" placeholder="Имя" required></div>
+				<div class="footer__form_line"><input type="tel" name="phone" required placeholder="Телефон" pattern="\+7\s\([0-9]{3}\)\s[0-9]{3}-[0-9]{2}-[0-9]{2}"></div>
+				<div><button type="submit" class="btn footer__form_btn" name="submit" value="отправить">Отправить</button></div>
+				<p>Нажимая на кнопку, вы даете согласие <br>на обработку своих персональных данных</p>
+
+			</form>
+		</div>
+	</div>
+	<!-- 	modal end-->
 
 	<script src="js/scripts.min.js"></script>
-	<script>
-		new WOW().init();
-	</script>
+
 </body>
 </html>

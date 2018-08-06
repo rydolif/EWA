@@ -1,16 +1,259 @@
+@media only screen and (max-width : 1600px)
+	.package
+		&__wrap
+			&::before
+				width: 600px
+				height: 600px
+
+		&__slider
+			&_img
+				width: 600px
+				height: 500px
+
+@media only screen and (max-width : 1400px)
+	.header
+		&__logo
+			margin-right: 20px
+			img
+				width: 150px
+				height: auto
+
+		&__link
+			font-size: 18px
+
+	.package
+		&__wrap
+			&::before
+				width: 500px
+				height: 500px
+
+		&__slider
+			&_img
+				width: 500px
+				height: 400px
+
+		&__namber
+			width: 170px
+			height: 170px
+
+	.landing__content::before
+		display: none
 
 @media only screen and (max-width : 1200px)
+	.modal
+		width: 320px
+		padding: 30px
+
+		h3
+			margin-bottom: 30px
+			font-size: 26px
+
+		p
+			br
+				display: none
+
+		input
+			height: 50px
+			line-height: 50px
+			font-size: 20px
+			&::placeholder
+				line-height: 50px
+				font-size: 20px
+
+		.btn
+			height: 50px
+			line-height: 50px
+			width: 100%
+			padding: 0
+			font-size: 20px
+			margin: 10px 0
+
+		.close
+			top: 15px
+			right: 15px
+			background-color: transparent
+	
+	h1
+		font-size: 150px
+
+	h2
+		font-size: 40px
+	
+	.section
+		padding: 40px 0
 
 	.header
+		&__btn
+			padding: 0 15px
+			height: 40px
+			line-height: 40px
 
+		&__logo
+			margin-right: 0
+			img
+				width: 130px
+
+		&__content
+			padding-top: 150px
+			padding-bottom: 70px
+
+			&_sub-title
+				margin-bottom: 40px
+
+			h2
+				font-size: 30px
+				margin-bottom: 40px
+
+			p
+				font-size: 22px
+				br
+					display: none
+
+		&__mail
+			font-size: 14px
+
+	.nav
+		li
+			margin-right: 20px
+
+		a
+			font-size: 14px
+	
+	.about
+		&__list
+			margin-left: 0
+
+			h3
+				font-size: 24px
+				margin-bottom: 10px
+
+			p
+				font-size: 18px
+
+		&__item
+			padding-bottom: 30px
+
+		&__block
+			img
+				width: 100px
+				height: auto
+	
+	.portfolio
+		p
+			font-size: 18px
+			line-height: 1.4
+
+		.slick-track
+			padding: 30px 0
+
+	.landing
+		h2
+			margin-bottom: 40px
+		
+		&__text
+			font-size: 22px
+
+		&__content
+			margin: 0
+			padding: 30px
+
+			&::after
+				height: 85%
+
+	.package
+		&__list
+			margin-bottom: 40px
+			br
+				display: none
+
+			li
+				margin-right: 2%
+				width: 23%
+
+		&__sub-title
+			br
+				display: block
+
+		&__namber
+			right: 20%
+
+	.customers
+		&__list
+			width: 102%
 
 @media only screen and (max-width : 992px)
-	#thanks
-		padding: 40px
+	.btn
+		height: 50px
+		line-height: 50px
+		font-size: 18px
+
+	h1
+		font-size: 80px
+
+	.header
+		&__container
+			padding-right: 70px
+
+		&__content
+			p
+				font-size: 16px
+
+			h2
+				font-size: 24px
+
+		&__mail
+			display: none
+
+	.about
+		h2
+			margin-bottom: 30px
+
+		&__block
+			text-align: center
+
+	.package
+		&__namber
+			right: 15%
+
+	.customers
+		background-position: 0 100%
+		p
+			margin-bottom: 30px
+
+	.footer
+		text-align: center
+
+		h2
+			margin-bottom: 20px
+
+		h3
+			font-size: 30px
+			margin-bottom: 30px
+
+		p
+			margin-bottom: 15px
+
+		&__tel
+			font-size: 26px
+			span
+				font-size: 26px
+
+		&__soc
+			justify-content: center
+
+		&__form
+			margin: 30px auto 0 auto
+			padding-left: 0
+
+			&_btn
+				margin: 0
+
+			p
+				margin-bottom: 0
 
 	.modal
 		width: 320px
-		padding: 40px
+		padding: 30px
 
 	.nav
 		position: fixed
@@ -19,48 +262,31 @@
 		height: 100%
 		flex-direction: column
 		right: -100%
-		top: 80px
+		top: 70px
 		z-index: -1
-		background: rgba(0, 0, 0, .9)
+		background-color: rgba(255, 255, 255, .95)
 		transition: all .3s
+		padding: 40px
 
 		ul
 			display: flex
 			flex-direction: column
 			justify-content: center
-			margin-top: 40px
-			margin-left: 40px
 
 		li
 			margin: 0
 			margin-bottom: 10px
 
-		a
-			color: #fff
+		.header__info
 			display: block
-			&::before
-				content: ''
-				width: 0
-				transform: scale(0)
-				transition: all .3s
-				position: absolute
-				bottom: 0
-				width: 80%
-				height: 1px
-				background-color: $accent
-				z-index: -1
+			margin-bottom: 15px
 
-			&:hover
-				color: $accent
-				text-decoration: none
-				&::before
-					transform: scale(1)
+		.header__mail
+			display: block
+			margin-bottom: 15px
 
-			&:focus
-				color: $accent
-				text-decoration: none
-				&::before
-					transform: scale(1)
+		&-active
+			right: 0
 
 	.hamburger
 		display: block
@@ -70,18 +296,196 @@
 	.hamburger-box
 		right: 0
 
-
-
 @media only screen and (max-width : 767px)
+	h2
+		font-size: 34px
+	
 	.header
+		&__content
+			p
+				margin-right: 20px
+
+			&_block
+				padding-left: 25px
+
+		&__btn
+			font-size: 14px
+
+	.landing
+		&__content
+			flex-direction: column
+			text-align: center
+			align-items: center
+
+		&__text
+			margin-bottom: 30px
+			br
+				display: none
+
+		&__namber
+			margin-bottom: 20px
+
+		&__block
+			align-items: center
+
+	.customers
+		br
+			display: none
+
+		&__item
+			width: 24%
+			margin-right: 1%
+			img
+				width: 100%
+				height: auto
+
+	.portfolio
+		&__text
+			padding: 20px
+			&::before
+				right: 0
+				left: 0
+				top: 0
+				bottom: 0
+
+	.package
+		h3
+			font-size: 26px
+			margin-bottom: 40px
+			line-height: 1.4
+
+		h4
+			margin-bottom: 0
+
+		&__namber
+			width: 140px
+			height: 140px
+		
+		&__sub-title
+			margin-bottom: 80px
+			br
+				display: none
+
+		.btn
+			margin: 0 auto
+			text-align: center
+
+		&__list
+			flex-direction: column
+
+			li
+				margin-right: 0
+				margin-bottom: 10px
+				width: 100%
+
+
+		&__namber
+			right: 0
+			padding-left: 20px
+			text-align: center
+			b, strong
+				font-size: 60px
+
+			sup
+				font-size: 40px
 
 @media only screen and (max-width : 576px)
 	.header
+		padding: 15px 0
+		
+		&__mail
+			display: none
+
+		&__btn
+			font-size: 12px
+
+		&__content
+			&_btn
+				padding: 0 25px
+	
+	.about
+		&__content
+			column-count: 1
+
+	.customers
+		h2
+			margin-bottom: 20px
+		p
+			font-size: 18px
+
+		&__namber
+			font-size: 40px
+
+		&__item
+			width: 48%
+			margin-right: 2%
 
 @media only screen and (max-width : 480px)
+	h1
+		font-size: 45px
+	
+	h2
+		font-size: 28px
+
+	.nav
+		top: 55px
+		.header__btn
+			display: block
+
 	.header
+		&__btn
+			display: none
 
+		&__info
+			display: none
 
+		&__content
+			padding-top: 100px
+			p
+				margin-bottom: 20px
+				margin-right: 0
+
+			&_block
+				flex-direction: column
+
+	.portfolio
+		padding: 0
+
+	.package
+		&__namber
+			width: 110px
+			height: 110px
+			span
+				font-size: 20px
+
+	.about
+		&__circle
+			width: 40px
+			height: 40px
+			&::before
+				width: 20px
+				height: 20px
+
+		&__item
+			&::before
+				top: 35px
+				left: 24px
+
+			i
+				font-size: 20px
+
+		&__list
+			h3
+				font-size: 18px
+
+		&__item
+			padding-left: 80px
+
+		&__download
+			font-size: 14px
+			padding-left: 30px
+			&::before
+				font-size: 18px
 
 
 
