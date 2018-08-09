@@ -3,8 +3,7 @@ $(function() {
 //-------------------------portfolio slider-----------------------------------------------
   $('.portfolio__slider').slick({
     dots: false,
-    arrows: false,
-    speed: 100,
+    speed: 300,
     slidesToShow: 4,
     rows: 2,
     centerMode: true,
@@ -22,7 +21,7 @@ $(function() {
         breakpoint: 1200,
         settings: {
           slidesToShow: 3,
-          centerPadding: '50px',
+          centerPadding: '100px',
         }
       },
       {
@@ -60,13 +59,13 @@ $(function() {
   });
 
 //-------------------------скорость якоря---------------------------------------
-  $(".nav").on("click","a", function (event) {
+  $(".header__list").on("click","a", function (event) {
       event.preventDefault();
       var id  = $(this).attr('href'),
           top = $(id).offset().top;
-      $('body,html').animate({scrollTop: top - 90}, 'slow', 'swing');
+      $('body,html').animate({scrollTop: top - 60}, 'slow', 'swing');
   //--------------------закриття меню при кліку на ссилку якоря--------------------
-     $('.hamburger--3dx').removeClass('is-active');
+     $('.hamburger').removeClass('hamburger-active');
      $('.header-menu').removeClass('header-menu');
      $('.header-active').removeClass('header-active');
      $('.nav-active').removeClass('nav-active');
@@ -148,3 +147,5 @@ $(function() {
 $(window).on('load', function(){
   $('.preloader').delay(1000).fadeOut('slow');
 });
+
+

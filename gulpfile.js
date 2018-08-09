@@ -48,6 +48,7 @@ gulp.task('js', function() {
 		'app/libs/swiper/swiper.min.js',
 		'app/libs/fancybox/jquery.fancybox.js',
 		'app/libs/slick/slick.min.js',
+		// 'app/libs/jquery.countTo.js',
 		// 'app/libs/animation/wow.min.js',
 		// 'app/libs/myParallax.js',
 		// 'app/libs/video/jquery.mb.YTPlayer.js',
