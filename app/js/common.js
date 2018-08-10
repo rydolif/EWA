@@ -13,7 +13,7 @@ $(function() {
       {
         breakpoint: 1600,
         settings: {
-          slidesToShow: 3,
+          slidesToShow: 4,
           centerPadding: '150px',
         }
       },
@@ -51,7 +51,9 @@ $(function() {
 //-------------------------package slider-----------------------------------------------
   var swiperone = new Swiper('.package__slider', {
     spaceBetween: 30,
-    effect: 'fade',
+    // effect: 'fade',
+    speed: 300,
+    slidesPerView: 1,
     navigation: {
       nextEl: '.swiper-button-next',
       prevEl: '.swiper-button-prev',

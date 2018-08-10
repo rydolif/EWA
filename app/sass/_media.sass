@@ -1,4 +1,7 @@
 @media only screen and (max-width : 1600px)
+	.container
+		max-width: 1170px
+
 	.header
 		&__btn
 			padding: 0 15px
@@ -44,7 +47,13 @@
 	.portfolio
 		.slick-arrow
 			width: 150px
+
 	.package
+		p
+			font-size: 16px
+		h4
+			font-size: 18px
+
 		&__wrap
 			&::before
 				width: 600px
@@ -55,26 +64,6 @@
 				width: 600px
 				height: 500px
 
-@media only screen and (max-width : 1400px)
-	.package
-		&__wrap
-			&::before
-				width: 500px
-				height: 500px
-
-		&__slider
-			&_img
-				width: 500px
-				height: 400px
-
-		&__namber
-			width: 170px
-			height: 170px
-
-	.landing__content::before
-		display: none
-
-@media only screen and (max-width : 1200px)
 	.modal
 		width: 320px
 		padding: 30px
@@ -162,11 +151,28 @@
 		&__content
 			margin: 0
 			padding: 30px
-
+			&::before
+				display: none
 			&::after
 				height: 85%
 
 	.package
+		&__wrap
+			position: relative
+			display: block
+			top: 30px
+			&::before
+				width: 500px
+				height: 500px
+
+		&__slide
+			margin: 0 auto
+
+		&__slider
+			&_img
+				width: 500px
+				height: 400px
+
 		&__list
 			margin-bottom: 40px
 			br
@@ -181,11 +187,38 @@
 				display: block
 
 		&__namber
-			right: 20%
+			width: 160px
+			height: 160px
+			b
+				font-size: 80px
+			sup
+				font-size: 60px
 
 	.customers
 		&__list
 			width: 102%
+
+
+@media only screen and (max-width : 1200px)
+	.package
+		&__wrap
+			&::before
+				transform: translate(-50%, 0)
+
+		.swiper-wrapper
+			width: 100%
+
+		&__slider_img
+			max-width: 500px
+			max-height: 400px
+			display: block
+			margin: 0 auto
+
+		.swiper-button-prev
+			left: 45%
+
+		.swiper-button-next
+			left: 55%
 
 @media only screen and (max-width : 992px)
 	.btn
@@ -311,9 +344,17 @@
 		right: 0
 
 @media only screen and (max-width : 767px)
+	.package
+		.swiper-button-next
+			left: auto
+			right: 15px
+
+		.swiper-button-prev
+			left: 15px
+
 	h2
 		font-size: 34px
-	
+
 	.header
 		&__content
 			p
@@ -438,6 +479,29 @@
 			margin-right: 2%
 
 @media only screen and (max-width : 480px)
+	.package
+		&__sub-title
+			margin-bottom: 95px
+
+		&__namber
+			width: 90px
+			height: 90px
+			padding-left: 10px
+			span
+				font-size: 20px
+
+		&__slider_img
+			max-width: 300px
+			max-height: 250px
+			display: block
+			margin: 0 auto
+
+		.swiper-button-next
+			left: 70%
+
+		.swiper-button-prev
+			left: 5%
+
 	h1
 		font-size: 45px
 	
@@ -475,19 +539,13 @@
 				line-height: 50px
 				font-size: 20px
 
-		.slick-next
-			left: 80%
-
 		.slick-prev
 			right: 80%
-
-	.package
+	
+	.landing
 		&__namber
-			width: 110px
-			height: 110px
-			span
-				font-size: 20px
-
+			font-size: 40px
+			
 	.about
 		&__circle
 			width: 40px
@@ -497,6 +555,7 @@
 				height: 20px
 
 		&__item
+			padding-left: 70px
 			&::before
 				top: 35px
 				left: 24px
@@ -507,9 +566,6 @@
 		&__list
 			h3
 				font-size: 18px
-
-		&__item
-			padding-left: 80px
 
 		&__download
 			font-size: 14px
