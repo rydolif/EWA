@@ -4,11 +4,11 @@ $(function() {
   $('.portfolio__slider').slick({
     dots: false,
     speed: 300,
-    slidesToShow: 4,
     rows: 2,
-    centerMode: true,
-    centerPadding: '250px',
-    slidesToShow: 4,
+    // centerMode: true,
+    // centerPadding: '250px',
+    slidesToShow: 6,
+    infinite: false,
     responsive: [
       {
         breakpoint: 1600,
