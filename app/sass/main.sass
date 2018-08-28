@@ -116,7 +116,7 @@
 			&::before
 				content: ""
 				position: absolute
-				left: 10px
+				left: 0
 				top: 0
 				bottom: 0
 				width: 8px
@@ -410,6 +410,7 @@
 .landing
 	padding-top: 100px
 	padding-bottom: 165px
+	position: relative
 	background-position: center
 	background-size: cover
 	background-repeat: no-repeat
@@ -428,13 +429,6 @@
 		padding: 70px 120px 60px 55px
 		margin: 0 120px
 		z-index: 1
-		&::before
-			content: url(../img/landing__nose.png)
-			position: absolute
-			width: auto
-			height: auto
-			left: 31.6%
-			bottom: -257px
 		&::after
 			content: ""
 			position: absolute
@@ -444,6 +438,16 @@
 			height: 320px
 			background-color: #ebfaf7
 			z-index: -1
+	
+	&__img
+		position: absolute
+		width: auto
+		height: auto
+		right: 45%
+		bottom: -85px
+		width: auto
+		height: auto
+		z-index: 1
 
 	&__text
 		font-size: 30px
@@ -472,6 +476,17 @@
 .package
 	padding-top: 160px
 	padding-bottom: 130px
+	position: relative
+	&::before
+		content: ""
+		position: absolute
+		top: 130px
+		left: 70%
+		transform: translate(-35%, 0)
+		width: 700px
+		height: 700px
+		background-color: #ebfaf7
+		border-radius: 100%
 
 	h2
 		margin-bottom: 20px
@@ -640,13 +655,13 @@
 	&__item
 		width: 23.5%
 		max-height: 100px
-		background-color: #fff
 		margin-right: 10px
 		margin-bottom: 10px
 		transition: all .6s
 		overflow: hidden
 		&:hover
 			box-shadow: 2px 4px 5px rgba(0, 0, 0, .1)
+			background-color: rgba(255, 255, 255, .9)
 			img
 				transition: all .6s
 				transform: scale(1.03)
@@ -743,8 +758,6 @@
 			font-size: 30px
 			margin-right: 15px
 			animation: hover-back .5s linear 1 forwards
-
-
 
 	&__form
 		padding-left: 120px
